@@ -12,11 +12,11 @@ function App() {
           <span>{count}</span>
         </p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            +
-          </button>
           <button type="button" onClick={() => setCount((count) => count - 1)}>
             -
+          </button>
+          <button type="button" onClick={() => setCount((count) => count + 1)}>
+            +
           </button>
         </p>
       </header>

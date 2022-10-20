@@ -1,26 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Counter from "./pages/Counter";
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Counter:
-          <span>{count}</span>
-        </p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count - 1)}>
-            -
-          </button>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            +
-          </button>
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="counter" element={<Counter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
